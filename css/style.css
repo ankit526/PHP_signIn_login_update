@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    background: linear-gradient(135deg, #40c9ff, #e81cff);
+
+}
+
+.login_bg,
+.signup_bg {
+    background-color: rgb(255, 255, 255);
+}
+
+.signup_center_absolute {
+    margin-top: 10%;
+    padding: 0, 50%, 10%, 0;
+}
+
+.center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.anchor_message {
+    text-decoration: none;
+}
