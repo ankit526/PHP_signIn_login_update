@@ -8,6 +8,7 @@
     $dbusername = 'root';
     $dbapassword = '';
     $_SESSION['message']="don't have account??";
+    $mail = "";
     
     function userExist($conn){
        $q = "select * from userdetail where Email = '".$_SERVER['$tempEmail']."';";
@@ -50,6 +51,7 @@
     {
         function login($conn){
             $_SERVER['$tempEmail'] = trim($_POST["Email"]);
+            $mail = 
             $_SERVER['$tempPassword'] = trim($_POST["password"]);
             if(empty($_SERVER['$tempEmail']) and empty($_SERVER['$tempPassword'])){
 
@@ -115,7 +117,7 @@
                             <label for="Email" class="form-label">Email Address
                             </label>
                             <input type="email" name="Email" class="form-control" id="Email"
-                                aria-describedby="emailHelp" required minlength="2">
+                                aria-describedby="emailHelp" value="<?php if(isset($_POST['Email'])) echo $_POST['Email']?>" required minlength="2">
                         </div>
                         
                         <div class="mb-3">
